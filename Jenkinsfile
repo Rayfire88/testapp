@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     sh "docker rm -f testapp || true"
-                    sh "docker run -d --name testapp -p 8080:80 ${IMAGE_NAME}:latest"
+                    sh "docker run -d --name testapp -p 9090:80 ${IMAGE_NAME}:latest"
                 }
             }
         }
