@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git credentialsId: 'github-token', url: 'https://github.com/Rayfire88/testapp.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
